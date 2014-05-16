@@ -23,7 +23,7 @@ body {
 }
 
 body { 
-    background-color:#ddd;
+    background-color:#eee;
 }
 .row-wide {
     margin-left:5%;
@@ -42,7 +42,7 @@ ul.icon-group li {
 i.fi-social-facebook {
     color:#1a85bd;
 }
-i.fi-social-faceboo:kRAxMLhover {
+i.fi-social-facebook:hover {
     text-shadow: 0 0 4px #1a85bd;
 }
 i.fi-mail,
