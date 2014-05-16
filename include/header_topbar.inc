@@ -1,4 +1,4 @@
-<div class="fixed">
+<div class="fixed contain-to-grid">
 	<nav class="top-bar" data-topbar>
 
 		<section class="top-bar-section">
