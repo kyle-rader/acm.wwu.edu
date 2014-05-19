@@ -4,6 +4,7 @@ function GetIcons()
 	return <<<EOT
 <ul class="icon-group">
 	<li><a href="mailto:wwu.acm.officers@gmail.com"><i class="fi-mail"></i></a></li>
+	<li><a href="https://twitter.com/ACMatWWU"><i class="fi-social-twitter"></i></a></li>
 	<li><a href="https://www.facebook.com/ACMatWWU"><i class="fi-social-facebook"></i></a></li>
 	<li><a href="https://github.com/kyle-rader/acm.wwu.edu"><i class="fi-social-github"></i></a></li>
 </ul>
