@@ -45,13 +45,19 @@ i.fi-social-facebook {
 i.fi-social-facebook:hover {
     text-shadow: 0 0 4px #1a85bd;
 }
+i.fi-social-twitter {
+	color:#55acee;
+}
+i.fi-social-twitter:hover {
+	text-shadow: 0 0 4px #55acee;
+}
 i.fi-mail,
 i.fi-social-github {
-    color:#ddd;
+    color:#333;
 }
 i.fi-mail:hover,
 i.fi-social-github:hover {
-    text-shadow: 0 0 4px #bbb;
+    text-shadow: 0 0 3px #333;
 }
 blockquote {
     color:#bbb;

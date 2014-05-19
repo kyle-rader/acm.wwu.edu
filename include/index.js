@@ -16,7 +16,9 @@ function LoadPage(page) {
 		$.get('/ajax/get_page.php?page=' + page, function(response) {
 			content.html(response).fadeIn(250);
 		});
-	}	
+	}
+	$('a.top-btn').parent().removeClass('active');
+	$('a.top-btn[data-target='+page+']').parent().addClass('active');
 };
 
 $(document).on('click', 'a.top-btn', function(event) {
