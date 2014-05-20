@@ -33,7 +33,7 @@
 				<li class="active"><a class="top-btn" data-target="home">Home</a></li>
 				<li><a class="top-btn" data-target="officers">Officers</a></li>
 				<li><a class="top-btn" data-target="events">Events</a></l>
-				<li><a class="top-btn" data-target="western">My Western</a></li>
+				<li><a href="https://websso.wwu.edu/cas/login?service=https://mywestern.wwu.edu/mywestern/Login">My Western</a></li>
 			</ul>
 		</section>
 	</nav>
