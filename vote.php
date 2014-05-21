@@ -50,7 +50,7 @@ if($stmt = $mysqli->prepare($sql)) {
 				</div>
 				<br>
 				<div class="row">
-					<div class="large-4 large-centered columns">
+					<div class="large-4 large-offset-2 columns">
 						<form id="vote-form" data-abide>
 							<table style="width:100%;">
 								<thead>
@@ -72,6 +72,10 @@ EOT;
 								Thank you for voting!
 							</div>
 						</form>
+					</div>
+					<div class="large-4 end columns">
+						<p>Winners from years 12-13 and 11-12:<br> Phil Nelson and Perry Fizzano respectively.</P>
+						<small>(A professor can only win once every 3 years)</small>
 					</div>
 				</div>
 			</div>
