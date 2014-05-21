@@ -28,7 +28,7 @@ if($check_stmt = $mysqli->prepare($check_sql)) {
 	$check_stmt->bind_result($count);
 	if($check_stmt->fetch()) {
 		if($count > 0) {
-			$response['msg'] = 'You have already voted!';
+			$response['msg'] = 'You have already voted! You will be logged out in 3 seconds.';
 			print json_encode($response);
 			exit();
 		}

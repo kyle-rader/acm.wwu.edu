@@ -93,16 +93,10 @@ $('#vote-form').submit(function(event) {
 		console.log(info);
 		alertBox.addClass(info.success ? 'success' : 'warning');
 		alertBox.text(info.msg).fadeIn(100);
-		setTimeout(function() { 
-			alertBox.fadeOut(750);
-			$.ajax({
-				url: '/ajax/cas_logout.php',
-				crossDomain:true,
-				dataType: 'jsonp'});
-		}, 3000);
 		setTimeout(function() {
-			window.location.replace("http://acm.wwu.edu");
-		}, 3005);
+			alertBox.fadeOut(750);
+			window.location.replace("/ajax/cas_logout.php");
+		}, 3000);
 	});
 });
 </script>
