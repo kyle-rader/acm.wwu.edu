@@ -47,14 +47,31 @@ if($stmt = $mysqli->prepare($sql)) {
 						You are voting as <strong><?php echo phpCAS::getUser(); ?></strong><br>
 						<small>(If this is not you, please <a href="?logout">logout</a> and log back in as you!)</small>
 					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<?php
-								foreach($proffs as $proff) {
-									print "<p>{$proff['id']} : {$proff['proff']} </p>";
-								}
-							?>
-						</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="large-4 large-centered columns">
+						<form id="vote-form" data-abide>
+							<table style="width:100%;">
+								<thead>
+									<th>Professor/ Instructor</th><th>Vote Choice</th>
+								</thead>
+								<tbody>
+									<?php
+										foreach($proffs as $proff) {
+											print <<< EOT
+												<tr><td>{$proff['proff']}</td><td><input type="radio" name="proff_id" value="{$proff['id']}" required/></td></tr>
+EOT;
+										}
+									?>
+							</table>
+							<br>
+							<input type="submit" class="button postfix" value="Vote"/>
+							<br>
+							<div id="vote-alert" class="alert-box" style="display:none;">
+								Thank you for voting!
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -63,4 +80,30 @@ if($stmt = $mysqli->prepare($sql)) {
 			</div>
 		</div>
 	</body>
+<script>
+$('#vote-form').unbind('submit');
+$('#vote-form').submit(function(event) {
+	event.preventDefault();
+	var url = '/ajax/vote.php';
+	var form = $(this);
+	var alertBox = $('#vote-alert');
+
+	$.post(url, $(this).serialize(), function(response) {
+		var info = JSON.parse(response);
+		console.log(info);
+		alertBox.addClass(info.success ? 'success' : 'warning');
+		alertBox.text(info.msg).fadeIn(100);
+		setTimeout(function() { 
+			alertBox.fadeOut(750);
+			$.ajax({
+				url: '/ajax/cas_logout.php',
+				crossDomain:true,
+				dataType: 'jsonp'});
+		}, 3000);
+		setTimeout(function() {
+			window.location.replace("http://acm.wwu.edu");
+		}, 3005);
+	});
+});
+</script>
 </html>

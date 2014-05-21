@@ -46,7 +46,7 @@ if($vote_stmt1 = $mysqli->prepare($vote_sql1)) {
 			if($vote_stmt2->execute()) {
 				$mysqli2->commit();
 				$response['success'] = true;
-				$response['msg'] = 'Thank you for voting! You will be logged out in 5 seconds.';
+				$response['msg'] = 'Thank you for voting! You will be logged out in 3 seconds.';
 			}
 			$vote_stmt2->close();
 		}

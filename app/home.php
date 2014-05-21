@@ -8,7 +8,7 @@ print PageTitle($title);
 
 <div class="row">
      <div class="large-12 columns">
-     	  <h3>Vote now for professor of the year</h3>
+     	  <h3>Vote now for professor of the 13-14 year</h3>
 	  <hr>
 	  <a class="button" href="/vote.php">Login To Vote</a>
      </div>
