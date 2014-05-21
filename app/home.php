@@ -5,3 +5,12 @@ $title = <<<EOT
 EOT;
 print PageTitle($title);
 ?>
+
+<div class="row">
+     <div class="large-12 columns">
+     	  <h3>Vote now for professor of the year</h3>
+	  <hr>
+	  <a class="button" href="/vote.php">Login To Vote</a>
+     </div>
+</div>
+
