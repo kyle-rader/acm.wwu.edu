@@ -18,6 +18,17 @@ $title = <<<EOT
 			<h2>WWU CS Professor of the year 13-14</h2>
 			<small></small>
 EOT;
+
+$sql = "SELECT ID, PROFF from votes;";
+$proffs = array();
+if($stmt = $mysqli->prepare($sql)) {
+	$stmt->execute();
+	$stmt->bind_result($proff_id, $proff);
+	while($stmt->fetch()) {
+		$proffs[] = array('id' => $proff_id, 'proff' => $proff);
+	}
+	$stmt->close();
+}
 ?>
 
 <!DOCTYPE html>
