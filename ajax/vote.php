@@ -1,4 +1,8 @@
 <?php
+
+print "Voting closed";
+exit();
+
 include_once "include/top_ajax.inc";
 include_once "$baseInclude/db.inc";
 include_once "../php_src/CAS-1.3.2/CAS.php";

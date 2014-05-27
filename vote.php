@@ -1,4 +1,7 @@
 <?php 
+print "Voting closed";
+exit();
+/*
 include_once('php_src/CAS-1.3.2/CAS.php');
 
 $baseInclude = $_SERVER['DOCUMENT_ROOT'] . '/include';
@@ -30,6 +33,7 @@ if($stmt = $mysqli->prepare($sql)) {
 	}
 	$stmt->close();
 }
+*/
 ?>
 
 <!DOCTYPE html>
