@@ -8,10 +8,10 @@ print PageTitle($title);
 
 <div class="row">
      <div class="large-12 columns">
-     	  <h3>Vote now for professor of the 13-14 year</h3>
-		  <small>Voting will be open until Monday night (5/26)</small>
+     	  <h3>Voting for the professor of the 13-14 year is now closed.</h3>
+		  <small>Find out who won at the CS BBQ!</small>
 	  <hr>
-	  <a class="button" href="/vote.php">Login To Vote</a>
+	  
      </div>
 </div>
 
